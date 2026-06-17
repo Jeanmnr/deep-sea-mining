@@ -3,98 +3,470 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deep Sea Mining</title>
+
+<title>Deep Sea Mining - Analyse de controverse</title>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f0f9ff;
+font-family:Arial, Helvetica, sans-serif;
+background:#eef7fb;
+color:#222;
+line-height:1.6;
 }
 
 header{
-    background:#0077b6;
-    color:white;
-    text-align:center;
-    padding:60px;
+height:100vh;
+background:
+linear-gradient(rgba(0,20,40,.6),rgba(0,20,40,.6)),
+url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:5rem;
+margin-bottom:20px;
+text-shadow:2px 2px 10px black;
+}
+
+.hero p{
+font-size:1.8rem;
+margin-bottom:40px;
+}
+
+.btn{
+background:#00d4ff;
+padding:15px 30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+border-radius:50px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#00aacc;
 }
 
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:30px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:12px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+padding:80px 10%;
 }
 
 h2{
-    color:#0077b6;
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
+color:#003049;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0077b6;
+}
+
+.pro{
+border-left:8px solid #2ecc71;
+}
+
+.con{
+border-left:8px solid #e74c3c;
+}
+
+.actors{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.actor{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.actor:hover{
+transform:translateY(-5px);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat{
+background:linear-gradient(135deg,#00b4d8,#0077b6);
+color:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat-number{
+font-size:3rem;
+font-weight:bold;
+}
+
+.timeline{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:4px;
+height:100%;
+background:#0077b6;
+}
+
+.event{
+width:45%;
+background:white;
+padding:20px;
+margin:25px 0;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.left{
+margin-right:auto;
+}
+
+.right{
+margin-left:auto;
 }
 
 footer{
-    text-align:center;
-    background:#023047;
-    color:white;
-    padding:20px;
+background:#003049;
+color:white;
+text-align:center;
+padding:50px;
 }
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.timeline::before{
+left:20px;
+}
+
+.event{
+width:90%;
+margin-left:40px !important;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>DEEP SEA MINING</h1>
-    <p>Progrès technologique ou désastre irréversible ?</p>
+
+<div class="hero">
+
+<h1>DEEP SEA MINING</h1>
+
+<p>
+Progrès technologique ou désastre irréversible ?
+</p>
+
+<a href="#controverse" class="btn">
+Explorer la controverse
+</a>
+
+</div>
+
 </header>
 
-<section>
+<section id="controverse" data-aos="fade-up">
+
+<h2>La controverse</h2>
+
+<div class="cards">
+
+<div class="card pro">
+
+<h3>Arguments favorables</h3>
+
+<ul>
+<li>Métaux essentiels à la transition énergétique</li>
+<li>Besoins croissants en nickel, cobalt et cuivre</li>
+<li>Développement des batteries électriques</li>
+<li>Réduction de la dépendance aux mines terrestres</li>
+<li>Enjeu stratégique pour les États</li>
+</ul>
+
+</div>
+
+<div class="card con">
+
+<h3>Arguments défavorables</h3>
+
+<ul>
+<li>Destruction d'écosystèmes encore inconnus</li>
+<li>90 % des espèces identifiées étaient inconnues</li>
+<li>Impacts potentiellement irréversibles</li>
+<li>Pollution sonore et sédimentaire</li>
+<li>Manque de connaissances scientifiques</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section data-aos="fade-up">
+
+<h2>Les acteurs principaux</h2>
+
+<div class="actors">
+
+<div class="actor">
+<h3>ISA</h3>
+<p>Régulateur international</p>
+</div>
+
+<div class="actor">
+<h3>The Metals Company</h3>
+<p>Promoteur du projet</p>
+</div>
+
+<div class="actor">
+<h3>Nauru</h3>
+<p>État favorable</p>
+</div>
+
+<div class="actor">
+<h3>Greenpeace</h3>
+<p>Opposition</p>
+</div>
+
+<div class="actor">
+<h3>WWF</h3>
+<p>Moratoire</p>
+</div>
+
+<div class="actor">
+<h3>Ifremer</h3>
+<p>Expert scientifique</p>
+</div>
+
+<div class="actor">
+<h3>CNRS</h3>
+<p>Recherche fondamentale</p>
+</div>
+
+<div class="actor">
+<h3>France</h3>
+<p>Position prudente</p>
+</div>
+
+</div>
+
+</section>
+
+<section data-aos="fade-up">
+
+<h2>Les chiffres clés</h2>
+
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number">21</div>
+Milliards de tonnes de nodules
+</div>
+
+<div class="stat">
+<div class="stat-number">90%</div>
+Espèces inconnues
+</div>
+
+<div class="stat">
+<div class="stat-number">44</div>
+Ans après, des traces restent visibles
+</div>
+
+<div class="stat">
+<div class="stat-number">31</div>
+Contrats d'exploration
+</div>
+
+</div>
+
+</section>
+
+<section data-aos="fade-up">
+
+<h2>Chronologie</h2>
+
+<div class="timeline">
+
+<div class="event left">
+<h3>1982</h3>
+<p>Convention des Nations Unies sur le droit de la mer.</p>
+</div>
+
+<div class="event right">
+<h3>1994</h3>
+<p>Création de l'International Seabed Authority (ISA).</p>
+</div>
+
+<div class="event left">
+<h3>2000 - 2010</h3>
+<p>Premiers contrats d'exploration.</p>
+</div>
+
+<div class="event right">
+<h3>2019</h3>
+<p>Échec du projet Solwara-1.</p>
+</div>
+
+<div class="event left">
+<h3>2021</h3>
+<p>Déclenchement de la règle des deux ans.</p>
+</div>
+
+<div class="event right">
+<h3>2022</h3>
+<p>La France soutient l'interdiction de l'exploitation.</p>
+</div>
+
+<div class="event left">
+<h3>2023</h3>
+<p>Expiration de la règle sans accord.</p>
+</div>
+
+<div class="event right">
+<h3>2024 - 2026</h3>
+<p>La controverse reste ouverte.</p>
+</div>
+
+</div>
+
+</section>
+
+<section data-aos="fade-up">
+
+<h2>Le cœur du débat</h2>
+
+<div class="cards">
 
 <div class="card">
-<h2>🌊 Qu'est-ce que le Deep Sea Mining ?</h2>
+
+<h3>Transition énergétique</h3>
+
 <p>
-L'exploitation minière des fonds marins consiste à extraire des métaux
-présents dans les grands fonds océaniques.
+Les partisans du Deep Sea Mining considèrent que les métaux présents dans les nodules polymétalliques sont indispensables à la fabrication des batteries, éoliennes et infrastructures nécessaires à la transition énergétique.
 </p>
+
 </div>
 
 <div class="card">
-<h2>✅ Arguments favorables</h2>
-<ul>
-<li>Métaux nécessaires aux batteries.</li>
-<li>Transition énergétique.</li>
-<li>Nouvelles opportunités économiques.</li>
-</ul>
+
+<h3>Principe de précaution</h3>
+
+<p>
+Les opposants estiment qu'il est impossible d'autoriser une exploitation industrielle dans un environnement dont moins de 5 % a été exploré et dont la biodiversité reste largement inconnue.
+</p>
+
 </div>
 
-<div class="card">
-<h2>❌ Arguments défavorables</h2>
-<ul>
-<li>Destruction d'écosystèmes fragiles.</li>
-<li>Impacts encore mal connus.</li>
-<li>Risques environnementaux importants.</li>
-</ul>
 </div>
 
+</section>
+
+<section data-aos="fade-up">
+
+<h2>Conclusion</h2>
+
 <div class="card">
-<h2>📊 Chiffres clés</h2>
-<ul>
-<li>Seulement 5 % des fonds océaniques explorés.</li>
-<li>90 % des espèces abyssales encore inconnues.</li>
-<li>37 % de diminution de la faune observée dans certaines zones exploitées.</li>
-</ul>
+
+<p style="font-size:1.2rem;text-align:center;">
+
+Le Deep Sea Mining oppose deux visions du futur :
+
+<br><br>
+
+🌍 Exploiter de nouvelles ressources pour accélérer la transition énergétique.
+
+<br><br>
+
+🐠 Préserver des écosystèmes profonds encore largement inconnus.
+
+<br><br>
+
+Aujourd'hui, aucune décision définitive n'a été prise et la controverse reste ouverte.
+
+</p>
+
 </div>
 
 </section>
 
 <footer>
-Projet ESIEE Paris - Deep Sea Mining
+
+<h3>Deep Sea Mining : progrès technologique ou désastre irréversible ?</h3>
+
+<p>
+Projet ESIEE Paris
+</p>
+
+<p>
+Lucas Jeannin • Maxime Goulvent • Antoine Monceyron • Jean Muniere
+</p>
+
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
 
 </body>
 </html>
